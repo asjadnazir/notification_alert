@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.asjad.notificationalert.GroupActivity">
+
+    <include layout="@layout/app_bar_layout" android:id="@+id/group_page_toolbar"/>
+
+    <Button
+        android:id="@+id/group_activity_send_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="Send Notification"
+        android:textColor="@android:color/white" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/message_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/group_activity_send_btn"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/group_page_toolbar"
+        android:stackFromBottom="true"
+        android:transcriptMode="normal" />
+
+</RelativeLayout>

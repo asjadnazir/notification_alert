@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context="com.example.asjad.notificationalert.GroupSettingsActivity">
+
+    <include
+        android:id="@+id/group_settings_page_toolbar"
+        layout="@layout/app_bar_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/group_settings_page_toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/page_outer_relative_layout"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+
+                <RelativeLayout
+                    android:id="@+id/page_inear_relative_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="42dp">
+
+                    <TextView
+                        android:id="@+id/group_settings_display_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:text="Display Name"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="30sp" />
+
+                    <ImageButton
+                        android:id="@+id/group_settings_name_edit_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/group_settings_display_name"
+                        android:layout_marginStart="8dp"
+                        android:layout_toEndOf="@+id/group_settings_display_name"
+                        app:srcCompat="@drawable/ic_edit_black_24dp" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/group_settings_participant"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/page_inear_relative_layout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="43dp"
+                    android:text="Participants"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/group_settings_members_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/background_light" />
+
+
+            <Button
+                android:id="@+id/group_settings_edit_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@android:color/background_light"
+                android:text="EDIT" />
+
+            <Button
+                android:id="@+id/group_settings_delete_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@android:color/background_light"
+                android:text="DELETE" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

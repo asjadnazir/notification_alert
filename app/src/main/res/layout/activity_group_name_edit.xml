@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.asjad.notificationalert.GroupNameEditActivity">
+
+    <include layout="@layout/app_bar_layout" android:id="@+id/name_edit_page_toolbar"/>
+
+    <EditText
+        android:id="@+id/name_edit_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name_edit_page_toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="23dp"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/name_edit_done_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/name_edit_edittext"
+        android:layout_below="@+id/name_edit_edittext"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="26dp"
+        android:clickable="true"
+        app:srcCompat="@drawable/ic_done_black_24dp" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/name_edit_back_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/name_edit_done_fab"
+        android:layout_marginEnd="15dp"
+        android:layout_toStartOf="@+id/name_edit_done_fab"
+        android:clickable="true"
+        app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+</RelativeLayout>
